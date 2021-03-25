@@ -23,8 +23,12 @@ function Sidebar() {
     );
     if (!input) return null;
 
-    //Input check - input sanitizing -- If the chat is not really exist  
-    if (EmailValidator.validate(input) && !chatAlreadyExists(input) && input !== user.email) {
+    //Input check - input sanitizing -- If the chat is not really exist
+    if (
+      EmailValidator.validate(input) &&
+      !chatAlreadyExists(input) &&
+      input !== user.email
+    ) {
       //add the cheat into the database 'chats' collection
       db.collection("chats").add({
         users: [user.email, input],
@@ -41,7 +45,7 @@ function Sidebar() {
   return (
     <Container>
       <Header>
-        <UserAvatar onClick={() => auth.signOut()} />
+        <UserAvatar src={user.photoURL} onClick={() => auth.signOut()} />
         <IconsContaienr>
           <IconButton>
             <ChatIcon />
@@ -59,8 +63,8 @@ function Sidebar() {
 
       <SidebarButton onClick={createChat}>Start a new chat</SidebarButton>
 
-      {chatSnapshot?.docs.map(chat => (
-          <Chat key={chat.id} id={chat.id} users={chat.data().users} />
+      {chatSnapshot?.docs.map((chat) => (
+        <Chat key={chat.id} id={chat.id} users={chat.data().users} />
       ))}
     </Container>
   );
@@ -75,8 +79,8 @@ const Search = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 5px;
-  border-radius: 2px;
-  border: 1px solid black;
+  border-radius: 10px;
+  border: 1px dashed #c8c6a7;
 `;
 
 const SearchInput = styled.input`
