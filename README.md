@@ -32,3 +32,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Next.JS by default static server side render 
+We can prepare a page on the server. When the user requests that page, it will deliver directly and will not recalucalted everything. 
+The server pre-fetch the page. The user need not wait for a long time when browsing the website 
+Server side render before the page load
+
+Dynamic Content (eg: Real-time app)
+-- 
+
+Whenever you need to stringify the timestamp  
+Sending from the api to client 
+you will lose the timestamp data type 
