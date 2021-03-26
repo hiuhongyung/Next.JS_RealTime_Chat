@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { auth, db } from "../firebase";
 import { Avatar, IconButton } from "@material-ui/core";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import AttachFileIcon from "@material-ui/icons/Attachfile";
 import { useCollection } from "react-firebase-hooks/firestore";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import MicIcon from "@material-ui/icons/Mic";
@@ -88,7 +87,7 @@ function ChatScreen({ chat, messages }) {
             <MoreVertIcon />
           </IconButton>
           <IconButton>
-            <AttachFileIcon />
+            
           </IconButton>
         </HeaderIcons>
       </Header>
